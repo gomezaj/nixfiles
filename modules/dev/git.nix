@@ -34,6 +34,8 @@ in
           command = "delta --dark --paging=never";
         }
       ];
+      # Adds a Signed-off-by trailer, as DCO projects like Zephyr require.
+      settings.git.commit.signOff = true;
     };
     programs.gh = {
       enable = true;
